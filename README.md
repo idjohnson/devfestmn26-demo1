@@ -11,6 +11,16 @@ A sample `.checklist` might be:
 3. check that the README.md is up to date
 ```
 
+## Quick Start & Setup
+
+The application supports **Vertex AI (Gemini)** or **Ollama** backends and requires one of them to be configured via environment variables:
+
+- **Gemini / Vertex AI:** Set `GEMINI_KEY` and `GEMINI_MODEL`
+- **Ollama:** Set `OLLAMA_URL` and `OLLAMA_MODEL`
+
+For detailed setup instructions, Docker commands, volume mounting examples, and configuration options, see [SETUP.md](file:///home/isaac/Workspaces/reviewApp/SETUP.md).
+
+
 
 
 

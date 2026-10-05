@@ -1,0 +1,14 @@
+services:
+  review:
+    build: .
+    image: review-app:latest
+    volumes:
+      - .:/repo
+    environment:
+      - GEMINI_KEY=${GEMINI_KEY}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.5-flash}
+      - OLLAMA_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3}
+      - REPO_CHECKLIST=${REPO_CHECKLIST:-/repo/.checklist}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
